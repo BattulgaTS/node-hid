@@ -15,11 +15,11 @@
     "test": "node src/test-ci.js",
     "showdevices": "node src/show-devices.js",
     "prepublish": "git submodule update --init",
-    "install": "prebuild-install || nwjs-old-install.sh",
+    "install": "nw-gyp build . 0.28.2",
     "prebuild": "prebuild --all --verbose",
     "prebuild-upload": "prebuild --all --strip --verbose --upload",
     "gypclean": "node-gyp clean",
-    "gypconfigure": "node-gyp configure",
+    "gypconfigure": "nw-gyp configure",
     "gypbuild": "node-gyp build",
     "clean": "rimraf build node_modules prebuilds",
     "distclean": "npm run clean && rimraf hidapi"

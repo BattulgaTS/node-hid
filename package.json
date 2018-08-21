@@ -15,7 +15,7 @@
     "test": "node src/test-ci.js",
     "showdevices": "node src/show-devices.js",
     "prepublish": "git submodule update --init",
-    "install": "nw-gyp rebuild --target=0.28.2 --arch=x64",
+    "install": "nw-gyp rebuild",
     "prebuild": "prebuild --all --verbose",
     "prebuild-upload": "prebuild --all --strip --verbose --upload",
     "gypclean": "node-gyp clean",
